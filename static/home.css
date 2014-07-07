@@ -246,7 +246,7 @@ div#body {
     z-index: 999;
 }
 .navbar-item {
-    display: inline-block;
+    visibility: hidden;
     margin-left: 81px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -416,6 +416,7 @@ a:hover {
 .project_col_title {
     color: white;
     font-size: 25px;
+    text-decoration: underline;
 }
 .proj_link {
     color: white;
@@ -504,6 +505,7 @@ a:hover {
     z-index: 998;
     left: 0;
     padding: 20px;
+    width: 300px;
 }
 /*#page_content {
     height:0px;

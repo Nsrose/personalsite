@@ -207,6 +207,11 @@ $(document).ready(function(){
 
 	$("#menu").click(function() {
 		if(!shown) {
+			$(".navbar-item").css({
+				"visibility":"visible",
+				"display":"inline-block",
+			})
+
 			$("#navbar").css({
 				"opacity":1,
 				"width":"100%",
@@ -214,10 +219,14 @@ $(document).ready(function(){
 			})
 			shown = true;
 		} else {
+			
 			$("#navbar").css({
 				"width":"50%",
 				"opacity":0,
 				
+			})
+			$(".navbar-item").css({
+				"visibility":"hidden",
 			})
 			shown = false;
 		}
