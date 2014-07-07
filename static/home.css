@@ -113,6 +113,7 @@ body {
   transform-style: preserve-3d;
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
+  box-shadow: 5px 5px 5px grey;
 }
 
 #card .back {
@@ -445,6 +446,7 @@ a:hover {
 }
 #contact_background {
     position: absolute;
+    width: 100%;
 }
 #contact {
     position: relative;
@@ -537,4 +539,12 @@ a:hover {
   -webkit-transform: rotateY(180deg) translateZ(1px);
   transform: rotateY(180deg) translateZ(1px);
   -ms-transform: rotateY(180deg) translateZ(1px);
+}
+
+#projects-container {
+    width: 1250px;
+    /* width: 75%; */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
