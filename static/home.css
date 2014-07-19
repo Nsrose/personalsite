@@ -358,15 +358,15 @@ div#body {
 .clear {
     clear:both;
 }
-
-a {
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+.ext_link {
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-
-a:hover {
+.ext_link:hover {
     color: rgba(125, 249, 255, 1);
-    opacity:0.75;
 }
 .exp-text {
     display: inline-block;
@@ -420,6 +420,14 @@ a:hover {
 }
 .proj_link {
     color: white;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.proj_link:hover {
+    color: rgba(125, 249, 255, 1);
 }
 .project_col_body {
     /* color: black; */
