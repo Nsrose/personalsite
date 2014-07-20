@@ -214,6 +214,7 @@ $(document).ready(function(){
 
 			$("#navbar").css({
 				"opacity":1,
+				"z-index":999,
 				"width":"100%",
 				
 			})
@@ -222,6 +223,7 @@ $(document).ready(function(){
 			
 			$("#navbar").css({
 				"width":"50%",
+				"z-index":0,
 				"opacity":0,
 				
 			})
