@@ -461,7 +461,7 @@ div#body {
     position: relative;
     overflow: hidden;
     height: 250px;
-    margin-top: 450px;
+    margin-top: 150px;
     transition: 2.5s;
 }
 #contact_title {
@@ -557,4 +557,17 @@ div#body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+#resume {
+    position: relative;
+    color: black;
+    text-align: center;
+    padding-top: 150px;
+    font-size: 40px; text-shadow: 0px 1px 0px rgba(255,255,255,.5);
+}
+#resume_link {
+    color: black;
+}
+#resume_link:hover {
+    color: rgba(125, 249, 255, 1);
 }
