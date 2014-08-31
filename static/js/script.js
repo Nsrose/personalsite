@@ -91,10 +91,10 @@ $(document).ready(function(){
 
 	$("#logo").hover(function() {
 		$(this).fadeTo(400, 0.5);
-		this.src = "static/roseactivated.png"
+		this.src = "static/images/roseactivated.png"
 		
 	}, function() {
-		this.src = "static/rose.png"
+		this.src = "static/images/rose.png"
 		$(this).fadeTo(400, 1)
 	})
 
@@ -119,13 +119,13 @@ $(document).ready(function(){
 			//Downscroll stuff here
 			if ($document.scrollTop() >= card_height && $document.scrollTop() < distance_to_exp + 300) {
 				$("#menu").show()
-				$("#menu img").attr('src', 'static/menu.png');
+				$("#menu img").attr('src', 'static/images/menu.png');
 				$("#navbar").css({
 					"-webkit-transition":"1s",
 					"transition":"1s"
 				})
 			} else if ($document.scrollTop() >= distance_to_exp && $document.scrollTop() < distance_to_proj + 200) {
-					$("#menu img").attr('src', 'static/menuwhite.png');
+					$("#menu img").attr('src', 'static/images/menuwhite.png');
 					if ($document.scrollTop() > distance_to_exp + 500 && $document.scrollTop() < distance_to_exp + 750) {
 						$("#exp-left-1").css({
 							"margin-left":"5%"
@@ -151,7 +151,7 @@ $(document).ready(function(){
 					}
 
 				} else if ($document.scrollTop() >= distance_to_proj) {
-					$("#menu img").attr('src', 'static/menu.png');
+					$("#menu img").attr('src', 'static/images/menu.png');
 				}
 				else {
 				$("#menu").hide()
@@ -165,7 +165,7 @@ $(document).ready(function(){
 		} else {
 			if ($document.scrollTop() >= card_height && $document.scrollTop() < distance_to_exp + 300) {
 				$("#menu").show()
-				$("#menu img").attr('src', 'static/menu.png');
+				$("#menu img").attr('src', 'static/images/menu.png');
 				$("#navbar").css({
 					"-webkit-transition":"1s",
 					"transition":"1s"
@@ -186,9 +186,9 @@ $(document).ready(function(){
 					"margin-left":"-40%"
 				});
 			} else if ($document.scrollTop() >= distance_to_exp && $document.scrollTop() < distance_to_proj + 200) {
-					$("#menu img").attr('src', 'static/menuwhite.png');
+					$("#menu img").attr('src', 'static/images/menuwhite.png');
 			} else if ($document.scrollTop() >= distance_to_proj) {
-				$("#menu img").attr('src', 'static/menu.png');
+				$("#menu img").attr('src', 'static/images/menu.png');
 			}
 			else {
 				$("#menu").hide()
