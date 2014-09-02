@@ -73,7 +73,22 @@
 
 		<div id="about">
 			<div class="section-title">About</div>
-			<div id="profile"><img src="static/images/profilepicture.png" class="img-scaled"></div>
+
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover');" id="flip-container-profile">
+				<div class="flipper">
+					<div class="front" id="front-profile">
+						<div id="profile"><img src="static/images/profilepicture.png" class="img-scaled"></div>
+					</div>
+					<div class="back" id="back-profile">
+						<div id="profile_back">
+							<img src="static/images/profilepictureback.JPG" class="img-scaled-wh">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+
+
 			<div id="description">
 				<div id="description_title">I took my first computer science course when I was two years old.</div>
 				<div class="line"><hr></div>
