@@ -404,14 +404,12 @@ div#body {
     vertical-align: top;
     background: black;
     padding: 20px;
-    /* box-shadow: -2px -2px 5px  rgba(125, 249, 255, 1); */
     border-radius: 2px;
-    /* margin-left: 60px; */
     margin-top: 60px;
     position: relative;
     transition: 0.5s;
     -webkit-transition: 0.5s;
-    /* cursor: pointer; */
+    box-shadow: 2px 3px 4px black;
 }
 .project_col_title {
     color: white;
@@ -524,7 +522,7 @@ div#body {
     overflow: hidden;
 }*/
 .project_col:hover {
-    box-shadow: -10px -10px 8px rgba(125, 249, 255, 1);
+    box-shadow: 6px 7px 8px rgba(125, 249, 255, 1);
 }
 
 .project_card_container {
