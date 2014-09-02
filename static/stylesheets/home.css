@@ -396,7 +396,7 @@ div#body {
     padding-top: 9%;
 }
 .project_col {
-    float: left;
+    /* float: left; */
     width: 300px;
     height: 250px;
     line-height: 2;
@@ -406,7 +406,7 @@ div#body {
     padding: 20px;
     /* box-shadow: -2px -2px 5px  rgba(125, 249, 255, 1); */
     border-radius: 2px;
-    margin-left: 60px;
+    /* margin-left: 60px; */
     margin-top: 60px;
     position: relative;
     transition: 0.5s;
@@ -416,7 +416,7 @@ div#body {
 .project_col_title {
     color: white;
     font-size: 25px;
-    text-decoration: underline;
+    text-decoration: none;
 }
 .proj_link {
     color: white;
@@ -431,6 +431,9 @@ div#body {
 }
 .project_col_body {
     /* color: black; */
+    position: relative;
+    z-index: 800;
+    top: 50px;
 }
 #projects_title {
     margin-bottom: 100px;
@@ -514,6 +517,7 @@ div#body {
     left: 0;
     padding: 20px;
     width: 300px;
+    top: 90px;
 }
 /*#page_content {
     height:0px;
@@ -552,7 +556,7 @@ div#body {
 }
 
 #projects-container {
-    width: 1250px;
+    width: 1140px;
     /* width: 75%; */
     margin-left: auto;
     margin-right: auto;
@@ -587,7 +591,9 @@ div#body {
 
 .flip-container, .front, .back {
     width: 320px;
-    height: 480px;
+    height: 350px;
+    float: left;
+    margin-right: 60px;
 }
 
 /* flip speed goes here */
