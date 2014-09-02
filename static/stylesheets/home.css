@@ -620,3 +620,15 @@ div#body {
 .back {
     transform: rotateY(180deg);
 }
+#cons {
+    color: black;
+}
+#cons_sub {
+    color: black;
+}
+#cons_content {
+    text-align: center;
+    margin-top: 200px;
+    font-size: 36px;
+    line-height: 2;
+}
