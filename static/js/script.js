@@ -16,12 +16,6 @@ $(document).ready(function(){
 	var distance_to_exp = card_height + about_height
 	var distance_to_proj = distance_to_exp + exp_height
 
-	
-
-
-
-
-
 	$("#logo").fadeTo(4000, 1)
 	window.setTimeout(function (){
 		$("#name").fadeTo(4000, 1); 
@@ -35,7 +29,6 @@ $(document).ready(function(){
 
 	var y = $(window).scrollTop();  
 	$("#logo").click(function() {
-		// $("html, body").animate({ scrollTop: y + $(window).height() }, 600); 	
 		$("#card").addClass("flipped")
 	})
 
@@ -48,47 +41,24 @@ $(document).ready(function(){
 	})
 
 	$('#scrolldown').click(function(){
-		// $("#contact").css({
-		// 	"margin-top":"250px",
-		// })
-		// $("#page_content").css({
-		// 	"height":"auto",
-		// })
 		$("html, body").animate({ scrollTop: $("#about").offset().top - 59 }, 1500);
 	});
 
 	$("#about-link").click(function() {
-		// $("#contact").css({
-		// 	"margin-top":"250px",
-		// })
-		// $("#page_content").css({
-		// 	"height":"auto",
-		// })
 		$("html, body").animate({ scrollTop: $("#about").offset().top - 59 }, 1500);	
 	})
 
 	$("#exp-link").click(function() {
-		// $("#contact").css({
-		// 	"margin-top":"250px",
-		// })
-		// $("#page_content").css({
-		// 	"height":"auto",
-		// })
 		$("html, body").animate({ scrollTop: $("#experience").offset().top }, 1500);	
 	})
 	$("#proj-link").click(function() {
-		// $("#contact").css({
-		// 	"margin-top":"250px",
-		// })
-		// $("#page_content").css({
-		// 	"height":"auto",
-		// })
 		$("html, body").animate({ scrollTop: $("#projects").offset().top -120}, 2000);	
 	})
 	$("#contact-link").click(function() {
 		$("#contact-item").click();
 	})
 
+	
 	$("#logo").hover(function() {
 		$(this).fadeTo(400, 0.5);
 		this.src = "static/images/roseactivated.png"
