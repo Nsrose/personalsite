@@ -1,22 +1,134 @@
 $(document).ready(function(){
 
+
+	// Scrolling operations ////////////////////////////////////////////////
+	
 	//Static heights
 	var card_height = parseInt($('#main').css('height').replace("px", ""));
 	var shown = false;
-	var about_content = parseInt($('#about').css('height').replace("px", ""));
-	var exp_content = parseInt($('#experience').css('height').replace("px", "")) + parseInt($('#exp-content').css('height').replace("px", ""));
-	var proj_content = parseInt($('#projects').css('height').replace("px", ""));
 
 	//These guys change on resize
 	var window_width = $(window).width();
-	var about_height = about_content + .09 * window_width + 2 * .15 * window_width
-	var exp_height = exp_content + 2 * .15 * window_width
-	var proj_height = proj_content + .15 * window_width
+	var about_height = document.getElementById('about').offsetHeight;
+	var exp_height = document.getElementById('experience').offsetHeight + 
+		document.getElementById("exp-content").offsetHeight;
+	var proj_height = document.getElementById('projects').offsetHeight;
 
-	var distance_to_exp = card_height + about_height
-	var distance_to_proj = distance_to_exp + exp_height
+	// For some weird reason, scrollTop is adding 200 more px, so adjustment:
+	var distance_to_exp = card_height + about_height + 200;
+	var distance_to_proj = distance_to_exp + exp_height;
 
-	$("#logo").fadeTo(4000, 1)
+	var $document = $(document)
+	
+	$(window).resize(function() {
+		var window_width = $(window).width();
+		var about_height = document.getElementById('about').offsetHeight;
+		var exp_height = document.getElementById('experience').offsetHeight + 
+			document.getElementById("exp-content").offsetHeight;
+		var proj_height = document.getElementById('projects').offsetHeight;
+
+		var distance_to_exp = card_height + about_height + 200;
+		var distance_to_proj = distance_to_exp + exp_height + 200;
+	})
+
+	var lastScrollTop = 0;
+	$document.scroll(function() {
+		var st = $(this).scrollTop();
+		var distanceToTop = $document.scrollTop();
+		if (st > lastScrollTop) {
+			
+			//Downscroll stuff here
+			if (distanceToTop >= card_height && distanceToTop < distance_to_exp) {
+				$("#menu").show()
+				$("#menu img").attr('src', 'static/images/menu.png');
+				$("#navbar").css({
+					"-webkit-transition":"1s",
+					"transition":"1s"
+				})
+			} else if (distanceToTop >= distance_to_exp  && distanceToTop < distance_to_proj) {
+					$("#menu img").attr('src', 'static/images/menuwhite.png');
+					if (distanceToTop > distance_to_exp + 300 && distanceToTop < distance_to_exp + 550) {
+						$("#exp-left-1").css({
+							"margin-left":"5%"
+						})
+					} else if (distanceToTop > distance_to_exp + 550 && distanceToTop < distance_to_exp + 800) {
+						$("#exp-right-1").css({
+							"margin-right":"5%"
+						})
+					}  
+					else if (distanceToTop > distance_to_exp + 800 && distanceToTop < distance_to_exp + 1050) {
+						$("#exp-left-2").css({
+							"margin-left":"5%"
+						})
+					}
+					else if (distanceToTop > distance_to_exp + 1050 && distanceToTop < distance_to_exp + 1200) {
+						$("#exp-right-2").css({
+							"margin-right":"5%"
+						})
+					} else if (distanceToTop > distance_to_exp + 1200 && distanceToTop < distance_to_exp + 1800) {
+						$("#exp-left-3").css({
+							"margin-left":"5%"
+						})
+					}
+
+				} else if (distanceToTop >= distance_to_proj) {
+					$("#menu img").attr('src', 'static/images/menu.png');
+				}
+				else {
+				$("#menu").hide()
+				$("#navbar").css({
+					"-webkit-transition":"0s",
+					"transition":"0s",
+					"opacity":0
+				})
+				shown = false;
+			}  
+		} else {
+			// Upscroll stuff here
+			if (distanceToTop >= card_height && distanceToTop < distance_to_exp) {
+				$("#menu").show()
+				$("#menu img").attr('src', 'static/images/menu.png');
+				$("#navbar").css({
+					"-webkit-transition":"1s",
+					"transition":"1s"
+				})
+				$("#exp-left-1").css({
+					"margin-left":"-40%"
+				});
+				$("#exp-right-1").css({
+					"margin-right":"-40%"
+				});
+				$("#exp-left-2").css({
+					"margin-left":"-40%"
+				});
+				$("#exp-right-2").css({
+					"margin-right":"-40%"
+				});
+				$("#exp-left-3").css({
+					"margin-left":"-40%"
+				});
+			} else if (distanceToTop >= distance_to_exp && distanceToTop < distance_to_proj) {
+					$("#menu img").attr('src', 'static/images/menuwhite.png');
+			} else if (distanceToTop >= distance_to_proj) {
+				$("#menu img").attr('src', 'static/images/menu.png');
+			}
+			else {
+				$("#menu").hide()
+				$("#navbar").css({
+					"-webkit-transition":"0s",
+					"transition":"0s",
+					"opacity":0
+				})
+				shown = false;
+			}  
+		}
+		lastScrollTop = st;
+	})
+	//////////////////////////////////////////////////////////////////////////
+
+
+
+	$("#logo").fadeTo(4000, 1);
 	window.setTimeout(function (){
 		$("#name").fadeTo(4000, 1); 
 		$("#subtitle").fadeTo(4000, 1);
@@ -70,111 +182,9 @@ $(document).ready(function(){
 
 
 
-	var $document = $(document)
 	
-	$(window).resize(function() {
-		var window_width = $(window).width();
-		var about_height = about_content + .09 * window_width + .15 * window_width
-		var exp_height = exp_content + .15 * window_width
-		var proj_height = proj_content + .15 * window_width
-
-		var distance_to_exp = card_height + about_height
-		var distance_to_proj = distance_to_exp + exp_height
-	})
 	
-	var lastScrollTop = 0;
-	$document.scroll(function() {
-		var st = $(this).scrollTop();
-		if (st > lastScrollTop) {
-			//Downscroll stuff here
-			if ($document.scrollTop() >= card_height && $document.scrollTop() < distance_to_exp + 300) {
-				$("#menu").show()
-				$("#menu img").attr('src', 'static/images/menu.png');
-				$("#navbar").css({
-					"-webkit-transition":"1s",
-					"transition":"1s"
-				})
-			} else if ($document.scrollTop() >= distance_to_exp && $document.scrollTop() < distance_to_proj + 200) {
-					$("#menu img").attr('src', 'static/images/menuwhite.png');
-					if ($document.scrollTop() > distance_to_exp + 500 && $document.scrollTop() < distance_to_exp + 750) {
-						$("#exp-left-1").css({
-							"margin-left":"5%"
-						})
-					} else if ($document.scrollTop() > distance_to_exp + 750 && $document.scrollTop() < distance_to_exp + 1000) {
-						$("#exp-right-1").css({
-							"margin-right":"5%"
-						})
-					}  
-					else if ($document.scrollTop() > distance_to_exp + 1000 && $document.scrollTop() < distance_to_exp + 1250) {
-						$("#exp-left-2").css({
-							"margin-left":"5%"
-						})
-					}
-					else if ($document.scrollTop() > distance_to_exp + 1250 && $document.scrollTop() < distance_to_exp + 1400) {
-						$("#exp-right-2").css({
-							"margin-right":"5%"
-						})
-					} else if ($document.scrollTop() > distance_to_exp + 1400 && $document.scrollTop() < distance_to_exp + 2000) {
-						$("#exp-left-3").css({
-							"margin-left":"5%"
-						})
-					}
-
-				} else if ($document.scrollTop() >= distance_to_proj) {
-					$("#menu img").attr('src', 'static/images/menu.png');
-				}
-				else {
-				$("#menu").hide()
-				$("#navbar").css({
-					"-webkit-transition":"0s",
-					"transition":"0s",
-					"opacity":0
-				})
-				shown = false;
-			}  
-		} else {
-			if ($document.scrollTop() >= card_height && $document.scrollTop() < distance_to_exp + 300) {
-				$("#menu").show()
-				$("#menu img").attr('src', 'static/images/menu.png');
-				$("#navbar").css({
-					"-webkit-transition":"1s",
-					"transition":"1s"
-				})
-				$("#exp-left-1").css({
-					"margin-left":"-40%"
-				});
-				$("#exp-right-1").css({
-					"margin-right":"-40%"
-				});
-				$("#exp-left-2").css({
-					"margin-left":"-40%"
-				});
-				$("#exp-right-2").css({
-					"margin-right":"-40%"
-				});
-				$("#exp-left-3").css({
-					"margin-left":"-40%"
-				});
-			} else if ($document.scrollTop() >= distance_to_exp && $document.scrollTop() < distance_to_proj + 200) {
-					$("#menu img").attr('src', 'static/images/menuwhite.png');
-			} else if ($document.scrollTop() >= distance_to_proj) {
-				$("#menu img").attr('src', 'static/images/menu.png');
-			}
-			else {
-				$("#menu").hide()
-				$("#navbar").css({
-					"-webkit-transition":"0s",
-					"transition":"0s",
-					"opacity":0
-				})
-				shown = false;
-			}  
-		}
-		lastScrollTop = st;
-		
-		
-	})
-
+	
 	$("#menu").click(function() {
 		if(!shown) {
 			$(".navbar-item").css({
