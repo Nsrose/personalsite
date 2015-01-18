@@ -45,7 +45,7 @@ $(document).ready(function(){
 					"-webkit-transition":"1s",
 					"transition":"1s"
 				})
-			} else if (distanceToTop >= distance_to_exp  && distanceToTop < distance_to_proj + 260) {
+			} else if (distanceToTop >= distance_to_exp  && distanceToTop < distance_to_proj) {
 					$("#menu img").attr('src', 'static/images/menuwhite.png');
 					if (distanceToTop > distance_to_exp + 300 && distanceToTop < distance_to_exp + 550) {
 						$("#exp-left-1").css({
@@ -107,7 +107,7 @@ $(document).ready(function(){
 				$("#exp-left-3").css({
 					"margin-left":"-40%"
 				});
-			} else if (distanceToTop >= distance_to_exp && distanceToTop < distance_to_proj + 260) {
+			} else if (distanceToTop >= distance_to_exp && distanceToTop < distance_to_proj) {
 					$("#menu img").attr('src', 'static/images/menuwhite.png');
 			} else if (distanceToTop >= distance_to_proj) {
 				$("#menu img").attr('src', 'static/images/menu.png');
