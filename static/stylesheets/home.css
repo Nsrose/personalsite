@@ -667,3 +667,19 @@ div#body {
     height: 321px;
     margin-left: 16px;
 }
+div#exp-image-bear {
+    width: 150px;
+}
+a.ext_link.black {
+    color: black;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+a.ext_link.black:hover {
+    color: blue;
+}
+
+a.ext_link.black:hover {
+    color: rgba(125, 249, 255, 1);
+}
