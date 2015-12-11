@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+	// Adjust date
+	var year = (new Date()).getUTCFullYear();
+	$("#contact_footer").text("© " + year.toString() + " | Nick Silver Rose");
+
 
 	// Scrolling operations ////////////////////////////////////////////////
 	
