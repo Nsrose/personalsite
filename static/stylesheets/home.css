@@ -451,8 +451,9 @@ div#body {
     display: inline-block; margin-left: 20px; margin-right: 20px; width: 40px; opacity: 0.2; -webkit-transition-duration: 0.75s; transition-duration: 0.75s;
 }
 #contact_item_container {
-    text-align: center; width: 100%; 
-    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
     position: absolute;
     z-index: 100;
     top: 100px;
@@ -464,7 +465,7 @@ div#body {
 #contact {
     position: relative;
     overflow: hidden;
-    height: 250px;
+    height: 300px;
     margin-top: 150px;
     transition: 2.5s;
 }
@@ -472,9 +473,12 @@ div#body {
     position: absolute;
     color: white;
     z-index: 100;
-    font-size: 40px; text-shadow: 0px 1px 0px rgba(255,255,255,.5);
-    width: 100%;
-    top: 50px;
+    font-size: 30px;
+    text-shadow: 0px 1px 0px rgba(255,255,255,.5);
+    /* width: 100%; */
+    top: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
 }
 #contact_background_overlay {
     position: absolute;
@@ -493,7 +497,7 @@ div#body {
     width: 100%;
     text-align: center;
     opacity: 0.3;
-    top: 200px;
+    top: 250px;
     text-shadow: 0px 1px 0px rgba(255,255,255,.5);
     margin-top: 20px;
 }
