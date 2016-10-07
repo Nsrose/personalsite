@@ -694,3 +694,20 @@ a.ext_link.black:hover {
 a.ext_link.black:hover {
     color: rgba(125, 249, 255, 1);
 }
+#calendar-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    margin-top: 200px;
+}
+#google-logo {
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+#google-logo:hover {
+    opacity: 0.5;
+}
