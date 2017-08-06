@@ -380,12 +380,14 @@ div#body {
     display: inline-block;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    vertical-align: top;
 }
 .exp-image-right {
     display: inline-block;
     width: 100px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    vertical-align: top;
 }
 .exp-image-left:hover {
     opacity: 0.5;
@@ -466,7 +468,7 @@ div#body {
     position: relative;
     overflow: hidden;
     height: 300px;
-    margin-top: 150px;
+    /* margin-top: 150px; */
     transition: 2.5s;
 }
 #contact_title {
@@ -575,7 +577,9 @@ div#body {
     color: black;
     text-align: center;
     padding-top: 150px;
-    font-size: 40px; text-shadow: 0px 1px 0px rgba(255,255,255,.5);
+    font-size: 40px;
+    text-shadow: 0px 1px 0px rgba(255,255,255,.5);
+    margin-bottom: 150px;
 }
 #resume_link {
     color: black;
@@ -679,7 +683,7 @@ div#body {
     margin-left: 16px;
 }
 div#exp-image-bear {
-    width: 150px;
+    width: 140px;
 }
 a.ext_link.black {
     color: black;
@@ -710,4 +714,20 @@ a.ext_link.black:hover {
 }
 #google-logo:hover {
     opacity: 0.5;
+}
+#call-to-action {
+    color: black;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 150px;
+    background: #333;
+}
+#call-to-action-content {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    line-height: 2;
+    color: white;
 }
